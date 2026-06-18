@@ -2,7 +2,7 @@ package dev.xxapfelsaft.phantom.feature.modules;
 
 import com.dwarslooper.cactus.client.gui.hud.element.DynamicHudElement;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import org.joml.Vector2i;
 
 public class ServerIPElement extends DynamicHudElement<ServerIPElement> {
@@ -25,7 +25,7 @@ public class ServerIPElement extends DynamicHudElement<ServerIPElement> {
     }
 
     @Override
-    public void renderContent(GuiGraphics context, int x, int y, int width, int height, int mouseX, int mouseY, float tickDelta, boolean focused) {
+    public void renderContent(GuiGraphicsExtractor context, int x, int y, int width, int height, int mouseX, int mouseY, float tickDelta, boolean focused) {
         updateIP();
         if (cachedIP.isEmpty()) return;
 
@@ -33,7 +33,7 @@ public class ServerIPElement extends DynamicHudElement<ServerIPElement> {
         if (mc.font == null) return;
 
         int color = textColor.get().color();
-        context.drawString(mc.font, cachedIP, x + 2, y + 2, color, textShadows());
+        context.text(mc.font, cachedIP, x + 2, y + 2, color, textShadows());
     }
 
     @Override

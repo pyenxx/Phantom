@@ -11,7 +11,6 @@ import com.dwarslooper.cactus.client.feature.module.Category;
 import com.dwarslooper.cactus.client.feature.module.Module;
 import com.dwarslooper.cactus.client.feature.command.Command;
 import com.dwarslooper.cactus.client.gui.hud.element.HudElement;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +18,7 @@ import org.slf4j.LoggerFactory;
 public class PhantomAddon implements ICactusAddon {
 
     public static final Logger LOGGER = LoggerFactory.getLogger("Phantom");
-    public static final Category CATEGORY = new Category("Phantom", new ItemStack(Items.PHANTOM_MEMBRANE));
+    public static final Category CATEGORY = new Category("Phantom", Items.PHANTOM_MEMBRANE);
 
     @Override
     public void onInitialize(RegistryBus registryBus) {

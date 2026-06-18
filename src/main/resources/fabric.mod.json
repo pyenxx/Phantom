@@ -3,7 +3,7 @@
 	"id": "phantom",
 	"version": "${version}",
 	"name": "Phantom",
-	"description": "A ghostly CactusMod addon that enhances your Minecraft experience.",
+	"description": "A Addon for CactusMods that adds some features.",
 	"authors": ["xxApfelsaft"],
 	"contact": {
 		"homepage": "https://github.com/xxapfelsaft/phantom",
@@ -20,9 +20,9 @@
 		"phantom.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.17.3",
-		"minecraft": "~1.21.11",
-		"java": ">=21",
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
 		"fabric-api": "*",
 		"cactus": "*"
 	}

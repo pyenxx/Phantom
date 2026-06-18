@@ -10,6 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.core.Holder;
 import net.minecraft.world.entity.Entity;
 
 import java.util.function.Consumer;
@@ -17,13 +18,13 @@ import java.util.function.Consumer;
 public class HitSoundModule extends Module {
 
     public enum SoundMode implements INamespaceOverrides {
-        catMeow(SoundEvents.CAT_AMBIENT),
-        catHiss(SoundEvents.CAT_HISS),
-        catPurr(SoundEvents.CAT_PURR),
-        catPurreow(SoundEvents.CAT_PURREOW),
-        catBeg(SoundEvents.CAT_BEG_FOR_FOOD),
-        catHurt(SoundEvents.CAT_HURT),
-        catDeath(SoundEvents.CAT_DEATH),
+        catMeow(SoundEvents.CAT_AMBIENT_BABY),
+        catHiss(SoundEvents.CAT_HISS_BABY),
+        catPurr(SoundEvents.CAT_PURR_BABY),
+        catPurreow(SoundEvents.CAT_PURREOW_BABY),
+        catBeg(SoundEvents.CAT_BEG_FOR_FOOD_BABY),
+        catHurt(SoundEvents.CAT_HURT_BABY),
+        catDeath(SoundEvents.CAT_DEATH_BABY),
         dolphinAttack(SoundEvents.DOLPHIN_ATTACK),
         wardenRoar(SoundEvents.WARDEN_ROAR),
         wardenSonicBoom(SoundEvents.WARDEN_SONIC_BOOM),
@@ -47,6 +48,10 @@ public class HitSoundModule extends Module {
 
         SoundMode(SoundEvent sound) {
             this.sound = sound;
+        }
+
+        SoundMode(Holder<SoundEvent> holder) {
+            this.sound = holder.value();
         }
 
         public SoundEvent getSound() {
