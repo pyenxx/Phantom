@@ -6,10 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-/**
- * Static callback dispatcher for entity attack events.
- * Modules register/unregister listeners in onEnable/onDisable.
- */
 public class PhantomAttackHandler {
 
     private static final List<Consumer<Entity>> listeners = new ArrayList<>();
