@@ -5,7 +5,8 @@
 	"mixins": [
 		"ExampleMixin",
 		"AttackMixin",
-		"NameTagMixin"
+		"NameTagMixin",
+		"AvatarNameTagMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
