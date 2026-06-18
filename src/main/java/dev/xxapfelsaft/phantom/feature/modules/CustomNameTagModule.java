@@ -4,29 +4,18 @@ import com.dwarslooper.cactus.client.event.EventHandler;
 import com.dwarslooper.cactus.client.event.impl.ClientTickEvent;
 import com.dwarslooper.cactus.client.feature.module.Module;
 import com.dwarslooper.cactus.client.feature.module.Module.Options;
-import com.dwarslooper.cactus.client.systems.config.settings.impl.EnumSetting;
-import com.dwarslooper.cactus.client.systems.config.settings.impl.EnumSetting.INamespaceOverrides;
+import com.dwarslooper.cactus.client.systems.config.settings.impl.IntegerSetting;
 import com.dwarslooper.cactus.client.systems.config.settings.impl.StringSetting;
 import dev.xxapfelsaft.phantom.PhantomAddon;
 
 public class CustomNameTagModule extends Module {
 
-    public enum Position implements INamespaceOverrides {
-        below,
-        above;
-
-        @Override
-        public String getNamespace() {
-            return "modules.custom_name_tag.settings.position";
-        }
-    }
-
-    // Static fields read by NameTagMixin
+    // Static fields read by AvatarNameTagMixin
     public static String customText = "";
-    public static boolean customTextAbove = false;
+    public static double yOffset = 0.35;
 
     private final StringSetting textSetting;
-    private final EnumSetting<Position> positionSetting;
+    private final IntegerSetting yOffsetSetting;
 
     public CustomNameTagModule() {
         super("custom_name_tag", PhantomAddon.CATEGORY, new Options());
@@ -35,8 +24,8 @@ public class CustomNameTagModule extends Module {
         textSetting.setMaxLength(64);
         mainGroup.add(textSetting);
 
-        positionSetting = new EnumSetting<>("Position", Position.below);
-        mainGroup.add(positionSetting);
+        yOffsetSetting = new IntegerSetting("YOffset", 35).min(-300).max(300);
+        mainGroup.add(yOffsetSetting);
     }
 
     @Override
@@ -59,6 +48,6 @@ public class CustomNameTagModule extends Module {
 
     private void syncSettings() {
         customText = textSetting.get();
-        customTextAbove = positionSetting.get() == Position.above;
+        yOffset = yOffsetSetting.get() / 100.0;
     }
 }

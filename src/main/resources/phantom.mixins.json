@@ -5,7 +5,6 @@
 	"mixins": [
 		"ExampleMixin",
 		"AttackMixin",
-		"NameTagMixin",
 		"AvatarNameTagMixin"
 	],
 	"injectors": {
