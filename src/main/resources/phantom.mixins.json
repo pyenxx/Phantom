@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "dev.xxapfelsaft.phantom.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin",
+		"AttackMixin",
+		"NameTagMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

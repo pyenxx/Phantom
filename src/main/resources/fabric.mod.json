@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "phantom",
+	"version": "${version}",
+	"name": "Phantom",
+	"description": "A ghostly CactusMod addon that enhances your Minecraft experience.",
+	"authors": ["xxApfelsaft"],
+	"contact": {
+		"homepage": "https://github.com/xxapfelsaft/phantom",
+		"sources": "https://github.com/xxapfelsaft/phantom"
+	},
+	"icon": "assets/phantom/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"cactus": [
+			"dev.xxapfelsaft.phantom.PhantomAddon"
+		]
+	},
+	"mixins": [
+		"phantom.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*",
+		"cactus": "*"
+	}
+}
