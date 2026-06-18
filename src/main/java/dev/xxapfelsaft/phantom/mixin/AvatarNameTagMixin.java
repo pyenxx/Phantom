@@ -30,7 +30,7 @@ public class AvatarNameTagMixin {
             poseStack,
             new Vec3(attachment.x, attachment.y + yShift, attachment.z),
             0,
-            Component.literal(CustomNameTagModule.customText),
+            Component.literal(text.replace("&", "§")),
             !state.isDiscrete,
             state.lightCoords,
             state.distanceToCameraSq,
