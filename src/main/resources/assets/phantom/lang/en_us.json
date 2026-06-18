@@ -1,7 +1,4 @@
 {
-	"modules.keystrokes.name": "Keystrokes",
-	"modules.keystrokes.description": "Displays pressed keys on screen",
-
 	"modules.hit_effect.name": "Hit Effect",
 	"modules.hit_effect.description": "Shows particles when hitting entities",
 	"modules.hit_effect.settings.particle.name": "Particle",
@@ -60,8 +57,8 @@
 	"modules.custom_name_tag.description": "Adds a custom text line to entity name tags",
 	"modules.custom_name_tag.settings.text.name": "Text",
 	"modules.custom_name_tag.settings.text.description": "The custom text to show",
-	"modules.custom_name_tag.settings.position.name": "Position",
-	"modules.custom_name_tag.settings.position.description": "Where to place the custom text",
-	"modules.custom_name_tag.settings.position.below": "Below",
-	"modules.custom_name_tag.settings.position.above": "Above"
+	"modules.custom_name_tag.settings.yOffset.name": "Y Offset",
+	"modules.custom_name_tag.settings.yOffset.description": "Vertical offset in blocks (0.01 = 1 unit)",
+
+	"hud.elements.server_ip.name": "Server IP"
 }

@@ -1,7 +1,4 @@
 {
-	"modules.keystrokes.name": "Keystrokes",
-	"modules.keystrokes.description": "Zeigt gedrückte Tasten auf dem Bildschirm an",
-
 	"modules.hit_effect.name": "Hit Effect",
 	"modules.hit_effect.description": "Zeigt Partikel beim Treffen von Entitäten an",
 	"modules.hit_effect.settings.particle.name": "Partikel",
@@ -60,8 +57,8 @@
 	"modules.custom_name_tag.description": "Fügt eine eigene Textzeile zu Namensschildern hinzu",
 	"modules.custom_name_tag.settings.text.name": "Text",
 	"modules.custom_name_tag.settings.text.description": "Der anzuzeigende Text",
-	"modules.custom_name_tag.settings.position.name": "Position",
-	"modules.custom_name_tag.settings.position.description": "Wo der Text angezeigt wird",
-	"modules.custom_name_tag.settings.position.below": "Darunter",
-	"modules.custom_name_tag.settings.position.above": "Darüber"
+	"modules.custom_name_tag.settings.yOffset.name": "Y-Versatz",
+	"modules.custom_name_tag.settings.yOffset.description": "Vertikaler Versatz in Blöcken (0.01 = 1 Einheit)",
+
+	"hud.elements.server_ip.name": "Server IP"
 }
